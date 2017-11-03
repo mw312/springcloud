@@ -1,25 +1,26 @@
-package com.murphy.springcloud.controller;
+package com.murphy.springboot.controller;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.murphy.springboot.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * ServiceTwoController
+ * ServiceRibbonController
  *
  * @author momo
  * @date 2017/11/2
  */
 @RestController
-public class ServiceTwoController {
+public class ServiceRibbonController {
 
-    @Value("${server.port}")
-    String port;
+    @Autowired
+    private DemoService demoService;
 
     @RequestMapping("/")
     public String home(@RequestParam String name) {
-        return "service two: hi " + name + ",i am from port:" + port;
+        return demoService.callServiceOne(name);
     }
 
 }
