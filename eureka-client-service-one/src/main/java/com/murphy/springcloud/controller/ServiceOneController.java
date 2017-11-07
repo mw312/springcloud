@@ -22,4 +22,10 @@ public class ServiceOneController {
         return "service one: hi " + name + ",i am from port:" + port;
     }
 
+    @RequestMapping("/one")
+    public String one() throws InterruptedException {
+        Thread.sleep(10000000);
+        return "service one: call one,i am from port:" + port;
+    }
+
 }
