@@ -22,6 +22,11 @@ public class ServiceOneController {
         return "service one: hi " + name + ",i am from port:" + port;
     }
 
+    /**
+     * 模拟大量请求时并发造成线程堵塞
+     * @return
+     * @throws InterruptedException
+     */
     @RequestMapping("/one")
     public String one() throws InterruptedException {
         Thread.sleep(10000000);

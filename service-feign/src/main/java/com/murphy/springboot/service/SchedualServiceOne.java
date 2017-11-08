@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "service-one")
 public interface SchedualServiceOne {
 
+    /**
+     * 本demo采用Feign实现服务之间的调用
+     *
+     * @param name
+     * @return
+     */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     String callFromEurekaClientServiceOne(@RequestParam(value = "name") String name);
 
