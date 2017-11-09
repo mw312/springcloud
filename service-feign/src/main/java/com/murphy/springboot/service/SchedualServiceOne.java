@@ -1,5 +1,6 @@
 package com.murphy.springboot.service;
 
+import com.murphy.springboot.service.impl.SchedualServiceOneHystric;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * Created by momo on 2017/11/6.
  */
-@FeignClient(value = "service-one")
+@FeignClient(value = "service-one", fallback = SchedualServiceOneHystric.class)
 public interface SchedualServiceOne {
 
     /**
