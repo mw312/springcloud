@@ -13,3 +13,6 @@ feign:
 spring:
   application:
     name: service-feign
+
+service-one:
+  domain: http://service-one

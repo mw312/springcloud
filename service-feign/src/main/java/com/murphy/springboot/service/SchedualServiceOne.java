@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * Created by momo on 2017/11/6.
  */
-@FeignClient(value = "service-one", fallback = SchedualServiceOneHystric.class)
+@FeignClient(value = "${service-one.domain}", fallback = SchedualServiceOneHystric.class)
 public interface SchedualServiceOne {
 
     /**
