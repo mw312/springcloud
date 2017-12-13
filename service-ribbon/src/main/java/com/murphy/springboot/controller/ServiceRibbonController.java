@@ -19,8 +19,13 @@ public class ServiceRibbonController {
     private DemoService demoService;
 
     @RequestMapping("/")
-    public String home(@RequestParam String name) {
-        return demoService.callServiceOne(name);
+    public String index(@RequestParam String name) {
+        return demoService.callServiceOneIndex(name);
+    }
+
+    @RequestMapping("/hello")
+    public String hello(@RequestParam String name) {
+        return demoService.callServiceOneHello(name);
     }
 
 }

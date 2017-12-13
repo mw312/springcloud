@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Created by momo on 2017/11/6.
+ *
+ * @author momo
+ * @date 2017/11/6
  */
 @FeignClient(value = "${service-one.domain}", fallback = SchedualServiceOneHystric.class)
 public interface SchedualServiceOne {
@@ -19,6 +21,15 @@ public interface SchedualServiceOne {
      * @return
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    String callFromEurekaClientServiceOne(@RequestParam(value = "name") String name);
+    String callServiceOneIndex(@RequestParam(value = "name") String name);
+
+    /**
+     * 本demo采用Feign实现服务之间的调用
+     *
+     * @param name
+     * @return
+     */
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    String callServiceOneHello(@RequestParam(value = "name") String name);
 
 }

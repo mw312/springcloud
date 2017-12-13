@@ -18,19 +18,25 @@ public class ServiceOneController {
     String port;
 
     @RequestMapping("/")
-    public String home(@RequestParam String name) {
+    public String index(@RequestParam String name) {
         return "service one: hi " + name + ",i am from port:" + port;
+    }
+
+    @RequestMapping("/hello")
+    public String hello(@RequestParam String name) {
+        return "service one: hello " + name + "!";
     }
 
     /**
      * 模拟大量请求时并发造成线程堵塞
+     *
      * @return
      * @throws InterruptedException
      */
-    @RequestMapping("/one")
-    public String one() throws InterruptedException {
-        Thread.sleep(10000000);
-        return "service one: call one,i am from port:" + port;
+    @RequestMapping("/sleep")
+    public String sleep() throws InterruptedException {
+        Thread.sleep(100000);
+        return "service one: do sleep,i am from port:" + port;
     }
 
 }

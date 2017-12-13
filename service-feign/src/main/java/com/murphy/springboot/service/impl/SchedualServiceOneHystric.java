@@ -13,8 +13,13 @@ import org.springframework.stereotype.Component;
 public class SchedualServiceOneHystric implements SchedualServiceOne {
 
     @Override
-    public String callFromEurekaClientServiceOne(String name) {
-        return "oh, feign call " + name + " error!";
+    public String callServiceOneIndex(String name) {
+        return "oh, feign call index error! name: " + name;
+    }
+
+    @Override
+    public String callServiceOneHello(String name) {
+        return "oh, feign call hello error! name: " + name;
     }
 
 }

@@ -22,10 +22,19 @@ public class ServiceFeignController {
     @Value("${service-one.domain}")
     String serviceOneDomain;
 
+    @Value("${service-one.uri.hello}")
+    String serviceOneHelloUri;
+
     @RequestMapping("/")
-    public String home(@RequestParam String name) {
+    public String index(@RequestParam String name) {
         return "feign to call service url: " + serviceOneDomain + ", return: " +
-                schedualServiceOne.callFromEurekaClientServiceOne(name);
+                schedualServiceOne.callServiceOneIndex(name);
+    }
+
+    @RequestMapping("/hello")
+    public String hello(@RequestParam String name) {
+        return "feign to call service url: " + serviceOneDomain + serviceOneHelloUri + ", return: " +
+                schedualServiceOne.callServiceOneHello(name);
     }
 
 }

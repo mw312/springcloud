@@ -18,8 +18,13 @@ public class ServiceTwoController {
     String port;
 
     @RequestMapping("/")
-    public String home(@RequestParam String name) {
+    public String index(@RequestParam String name) {
         return "service two: hi " + name + ",i am from port:" + port;
+    }
+
+    @RequestMapping("/hello")
+    public String hello(@RequestParam String name) {
+        return "service two: hello " + name + "!";
     }
 
 }

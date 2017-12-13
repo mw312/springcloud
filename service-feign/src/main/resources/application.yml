@@ -16,3 +16,5 @@ spring:
 
 service-one:
   domain: http://service-one
+  uri:
+    hello: /hello

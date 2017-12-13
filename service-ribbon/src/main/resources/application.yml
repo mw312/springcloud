@@ -12,3 +12,5 @@ spring:
 
 service-one:
   domain: http://service-one #如果restTemplate没有配置@LoadBalanced，则需要填写服务的实际ip地址：http://localhost:8761。反之则配置服务别名。
+  uri:
+    hello: /hello
