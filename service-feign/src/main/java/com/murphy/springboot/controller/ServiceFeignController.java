@@ -22,7 +22,7 @@ public class ServiceFeignController {
     @Value("${service-one.domain}")
     String serviceOneDomain;
 
-    @Value("${service-one.uri.hello}")
+    @Value("${service-one.api.hello}")
     String serviceOneHelloUri;
 
     @RequestMapping("/")

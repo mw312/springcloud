@@ -21,7 +21,7 @@ public class DemoService {
     @Value("${service-one.domain}")
     String serviceOneDomain;
 
-    @Value("${service-one.uri.hello}")
+    @Value("${service-one.api.hello}")
     String serviceOneHelloUri;
 
     /**
