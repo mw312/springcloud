@@ -11,6 +11,7 @@ spring:
     name: service-ribbon
 
 service-one:
-  domain: http://service-one #如果restTemplate没有配置@LoadBalanced，则需要填写服务的实际ip地址：http://localhost:8761。反之则配置服务别名。
+  # 如果使用别名调用，restTemplate必须配置@LoadBalanced，利用ribbon进行负载均衡；反之如果使用服务的实际ip地址(http://localhost:8761)调问，restTemplate则不能配置@LoadBalanced。
+  domain: http://service-one
   api:
     hello: /hello
