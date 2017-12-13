@@ -8,4 +8,5 @@ eureka:
 
 spring:
   application:
+    # 测试模拟两个service-one服务集群
     name: service-one

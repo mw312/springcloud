@@ -14,7 +14,8 @@ zuul:
   routes:
     api-a:
       path: /api-a/**
-      serviceId: service-ribbon
+      # 如果service-one服务为分布式集群服务，则zuul网关服务利用ribbon实现负载均衡
+      serviceId: service-one
     api-b:
       path: /api-b/**
       serviceId: service-feign
