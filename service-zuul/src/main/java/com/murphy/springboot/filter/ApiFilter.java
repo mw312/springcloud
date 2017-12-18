@@ -50,7 +50,8 @@ public class ApiFilter extends ZuulFilter {
         for (Map.Entry<String, Map<String, String>> entry : routes.entrySet()) {
             routeKey = entry.getKey();
             if (-1 != request.getRequestURL().toString().indexOf(routeKey)) {
-                return apiFilterFactory.getServiceFilterInstanceByRouteName(routeKey).execute();
+                ICallServiceFilter filter = apiFilterFactory.getServiceFilterInstanceByRouteName(routeKey);
+                return null != filter ? filter.execute() : null;
             }
         }
         logger.info("no match!");
