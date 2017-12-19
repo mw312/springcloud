@@ -19,4 +19,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/spring-cloud-samples/config-repo
+          uri: https://github.com/mw312/springcloud/
+          searchPaths: springCloudConfig
+
+
