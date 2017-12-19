@@ -8,7 +8,7 @@ spring:
       config:
         server:
           git:
-            uri: https://github.com/mw312/springcloud/
+            uri: https://github.com/mw312/springcloud
             searchPaths: springCloudConfig
 
 eureka:
