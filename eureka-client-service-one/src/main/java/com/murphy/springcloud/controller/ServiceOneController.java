@@ -1,5 +1,7 @@
 package com.murphy.springcloud.controller;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,11 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ServiceOneController {
 
+    private static final Log log = LogFactory.getLog(ServiceOneController.class);
+
     @Value("${server.port}")
     String port;
 
     @RequestMapping("/")
     public String index(@RequestParam String name) {
+        log.info("log info : one index!");
         return "service one: hi " + name + ",i am from port:" + port;
     }
 
