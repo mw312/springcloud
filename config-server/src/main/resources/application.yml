@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: config-server
+  cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/mw312/springcloud/
+            searchPaths: springCloudConfig
 
 eureka:
   client:
@@ -13,13 +19,3 @@ eureka:
 logging:
   level:
     org.springframework.cloud: 'DEBUG'
-
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/mw312/springcloud/
-          searchPaths: springCloudConfig
-
-
