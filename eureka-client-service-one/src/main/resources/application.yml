@@ -1,33 +1,8 @@
-server:
-  port: 8761
-
 spring:
-  application:
-    name: service-one
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
-
-logging:
-  level:
-    com.murphy.springcloud: 'INFO'
-
----
-spring:
-  profiles: dev
   cloud:
     config:
       label: master
       profile: dev
       uri: http://localhost:8888/
 
----
-spring:
-  profiles: test
-  cloud:
-    config:
-      label: master
-      profile: test
-      uri: http://localhost:8888/
+
