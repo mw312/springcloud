@@ -10,9 +10,11 @@ spring:
           git:
             uri: https://github.com/mw312/springcloud
             searchPaths: springCloudConfig
-        label: master
-        profile: dev
-        uri: http://localhost:8888/
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
 
 logging:
   level:
