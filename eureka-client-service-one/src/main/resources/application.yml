@@ -29,3 +29,5 @@ logging:
 
 test: this is from local config.
 
+test3: test3
+

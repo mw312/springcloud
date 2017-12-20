@@ -27,10 +27,18 @@ public class ServiceOneController {
     @Value("${spring.datasource.url}")
     String url;
 
+    @Value("${test2}")
+    String test2;
+
+    @Value("${test3}")
+    String test3;
+
     @RequestMapping("/")
     public String index(@RequestParam String name) {
         log.info("spring cloud config center of test:" + test);
         log.info("spring cloud config of spring.datasource.url:" + url);
+        log.debug("test2:" + test2);
+        log.debug("test3:" + test3);
         return "service one: hi " + name + ",i am from port:" + port;
     }
 

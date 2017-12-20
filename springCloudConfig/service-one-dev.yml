@@ -1,6 +1,6 @@
 logging:
   level:
-    com.murphy.springcloud: 'error'
+    com.murphy.springcloud: 'info'
 
 test: this is from gitHub config center -- service one dev.
 
