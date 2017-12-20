@@ -1,3 +1,5 @@
+#如果服务的配置是通过配置中心实例(serviceId)/集群的方式读取的，必须使用此bootstrap.yml配置#
+#而且必须在此服务中配置eureka server地址，因为此配置加载时就需要使用serviceId访问config-server#
 spring:
   profiles: dev
   cloud:
@@ -26,7 +28,9 @@ spring:
 spring:
   application:
     name: service-one
-  cloud:
-    config:
-      testname: bbbb
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
 

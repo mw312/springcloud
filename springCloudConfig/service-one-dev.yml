@@ -1,14 +1,9 @@
 server:
   port: 8761
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
-
 logging:
   level:
-    com.murphy.springcloud: 'DEBUG'
+    com.murphy.springcloud: 'debug'
 
 test: this is from gitHub config center -- service one dev.
 

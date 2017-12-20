@@ -21,12 +21,12 @@ public class ServiceOneController {
     @Value("${server.port}")
     String port;
 
-    @Value("${spring.cloud.config.testname}")
+    @Value("${test}")
     String test;
 
     @RequestMapping("/")
     public String index(@RequestParam String name) {
-        log.info("spring cloud config of test -- name:" + test);
+        log.info("spring cloud config of test:" + test);
         return "service one: hi " + name + ",i am from port:" + port;
     }
 
