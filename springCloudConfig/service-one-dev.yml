@@ -8,7 +8,7 @@ eureka:
 
 logging:
   level:
-    com.murphy.springcloud: 'INFO'
+    com.murphy.springcloud: 'DEBUG'
 
 test: this is from gitHub config center -- dev.
 
