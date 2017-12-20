@@ -2,7 +2,7 @@ server:
   port: 8761
 
 spring:
-  application:
+  test:
     name: service-one1
 
 eureka:
