@@ -18,4 +18,4 @@ eureka:
 
 logging:
   level:
-    org.springframework.cloud: 'DEBUG'
+    org.springframework.cloud: 'INFO'
