@@ -1,9 +1,6 @@
-server:
-  port: 8761
-
 logging:
   level:
-    com.murphy.springcloud: 'debug'
+    com.murphy.springcloud: 'error'
 
 test: this is from gitHub config center -- service one dev.
 

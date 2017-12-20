@@ -1,0 +1,31 @@
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tomato
+    username: ota
+    password: ota
+    driver-class: org.postgresql.Driver
+
+---
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:postgresql://192.168.20.61:5432/tomato
+    username: ota
+    password: ota
+    driver-class: org.postgresql.Driver
+
+--- #在此配置各环境下的公共配置信息#
+spring:
+  application:
+    name: service-one
+
+server:
+  port: 8761
+
+logging:
+  level:
+    com.murphy.springcloud: 'info'
+
+test: this is from local config.
+

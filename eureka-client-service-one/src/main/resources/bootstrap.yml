@@ -1,37 +1,24 @@
-#如果服务的配置是通过配置中心实例(serviceId)/集群的方式读取的，必须使用此bootstrap.yml配置#
-#而且必须在此服务中配置eureka server地址，因为此配置加载时就需要使用serviceId访问config-server#
+#系统级配置文件，优先于application.yml加载,用于应用程序上下文的引导阶段。#
+#例如：如果服务的配置是通过配置中心实例(serviceId)/集群的方式读取的，必须使用此bootstrap.yml配置#
+#而且必须在此服务中配置eureka server地址，因为要优先注册到服务中心后，才能使用serviceId访问config-server#
 spring:
-  profiles: dev
+  profiles: pro
+  #生产环境可以通过配置中心管理配置文件，1.便于更改后直接重启即可生效，不用重新部署。2.权限控制更加有效，防止开发人员都能看到生产的配置信息#
   cloud:
     config:
-      name: tt
+      #name: serviceOne 默认为application.name,如果配置了别名，则github上的文件名也要和别名相同，例如：serviceOne-dev.yml
       label: master
-      profile: dev
+      profile: test
       #uri: http://localhost:8888/
       #配置中心集群部署，通过负载均衡连接配置中心#
       discovery:
         enabled: true
         serviceId: config-server
 
----
-spring:
-  profiles: test
-  cloud:
-    config:
-      label: master
-      profile: test
-      #uri: http://localhost:8888/
-      discovery:
-        enabled: true
-        serviceId: config-server
-
 --- #在此配置各环境下的公共配置信息#
-spring:
-  application:
-    name: service-one
-
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
 
+test: this is from local config1.
