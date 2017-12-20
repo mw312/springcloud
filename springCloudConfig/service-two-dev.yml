@@ -1,5 +1,5 @@
 server:
-  port: 8761
+  port: 8762
 
 eureka:
   client:
@@ -10,5 +10,5 @@ logging:
   level:
     com.murphy.springcloud: 'DEBUG'
 
-test: this is from gitHub config center -- service one dev.
+test: this is from gitHub config center -- service two dev.
 

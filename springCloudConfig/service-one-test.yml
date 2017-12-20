@@ -10,4 +10,4 @@ logging:
   level:
     com.murphy.springcloud: 'INFO'
 
-test: this is from gitHub config center -- test.
+test: this is from gitHub config center -- service one test.

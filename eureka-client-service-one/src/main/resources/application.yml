@@ -21,7 +21,5 @@ spring:
     name: service-one
   cloud:
     config:
-      label: master1
-      uri: http://localhost:8111/
       testname: bbbb
 
