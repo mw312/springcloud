@@ -14,6 +14,7 @@ logging:
   level:
     com.murphy.springcloud: 'INFO'
 
+---
 spring:
   profiles: dev
   cloud:
@@ -22,6 +23,7 @@ spring:
       profile: dev
       uri: http://localhost:8888/
 
+---
 spring:
   profiles: test
   cloud:
