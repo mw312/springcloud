@@ -25,7 +25,7 @@ server:
 
 logging:
   level:
-    com.murphy.springcloud: 'info'
+    com.murphy.springcloud: 'debug'
 
 test: this is from local config.
 
