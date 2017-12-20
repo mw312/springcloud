@@ -15,7 +15,13 @@ spring:
       profile: test
       uri: http://localhost:8888/
 
----
+--- #在此配置各环境下的公共配置信息#
 spring:
   application:
     name: service-one
+  cloud:
+    config:
+      label: master1
+      uri: http://localhost:8111/
+      testname: bbbb
+
