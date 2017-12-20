@@ -6,6 +6,7 @@ spring:
     name: config-server
   cloud:
       config:
+        label: master
         server:
           git:
             uri: https://github.com/mw312/springcloud
