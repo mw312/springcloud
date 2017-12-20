@@ -1,3 +1,6 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: config-server
@@ -10,11 +13,6 @@ spring:
         label: master
         profile: dev
         uri: http://localhost:8888/
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
 
 logging:
   level:
