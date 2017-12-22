@@ -16,12 +16,12 @@ spring:
     driver-class: org.postgresql.Driver
 
 --- #在此配置各环境下的公共配置信息#
+server:
+  port: 8761
+
 spring:
   application:
     name: service-one
-
-server:
-  port: 8761
 
 logging:
   level:

@@ -2,8 +2,6 @@ server:
   port: 18761
 
 spring:
-  application:
-    name: service-one
   datasource:
     url: jdbc:postgresql://10.10.10.110:5432/tomato
     username: test
