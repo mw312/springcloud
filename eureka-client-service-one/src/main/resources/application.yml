@@ -10,6 +10,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10 # 续约更新时间间隔（默认30秒）
+    leaseExpirationDurationInSeconds: 30 # 租期到期时间（默认90秒）
 
 ---
 spring:
