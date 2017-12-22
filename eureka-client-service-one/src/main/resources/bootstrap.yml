@@ -6,9 +6,9 @@ spring:
   #生产环境可以通过配置中心管理配置文件，1.便于更改后直接重启即可生效，不用重新部署。2.权限控制更加有效，防止开发人员都能看到生产的配置信息#
   cloud:
     config:
-      #name: serviceOne 默认为application.name,如果配置了别名，则github上的文件名也要和别名相同，例如：serviceOne-dev.yml
+      #name: serviceOne #默认为application.name,如果配置了别名，则github上的文件名也要和别名相同，例如：serviceOne-dev.yml
       label: master
-      profile: test
+      profile: pro
       #uri: http://localhost:8888/
       #配置中心集群部署，通过负载均衡连接配置中心#
       discovery:
