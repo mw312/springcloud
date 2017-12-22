@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
+      defaultZone: http://192.168.20.61:8760/eureka/
 
 --- #在此配置各环境下的公共配置信息#
 server:
