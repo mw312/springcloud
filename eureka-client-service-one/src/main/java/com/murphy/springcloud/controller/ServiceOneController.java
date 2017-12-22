@@ -18,20 +18,14 @@ public class ServiceOneController {
 
     private static final Log log = LogFactory.getLog(ServiceOneController.class);
 
-    //@Value("${server.port}")
+    @Value("${server.port}")
     String port;
 
     @Value("${test}")
     String test;
 
-    //@Value("${spring.datasource.url}")
+    @Value("${spring.datasource.url}")
     String url;
-
-    @Value("${test2}")
-    String test2;
-
-    @Value("${test3}")
-    String test3;
 
     @Value("${spring.cloud.config.label}")
     String label;
@@ -40,8 +34,6 @@ public class ServiceOneController {
     public String index(@RequestParam String name) {
         log.info("spring cloud config center of test:" + test);
         log.info("spring cloud config of spring.datasource.url:" + url);
-        log.info("test2:" + test2);
-        log.info("test3:" + test3);
         log.info("label:" + label);
         return "service one: hi " + name + ",i am from port:" + port;
     }

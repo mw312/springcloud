@@ -2,7 +2,6 @@ server:
   port: 8762
 
 spring:
-  profiles: pro
   datasource:
     url: jdbc:postgresql://10.10.10.110:5432/tomato
     username: test
@@ -13,4 +12,4 @@ logging:
   level:
     com.murphy.springcloud: 'INFO'
 
-test: this is from gitHub config center -- service one test.
+test: this is from gitHub config center -- service-one-pro.yml

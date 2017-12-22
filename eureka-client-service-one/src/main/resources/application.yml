@@ -20,14 +20,12 @@ spring:
   application:
     name: service-one
 
-#server:
-#  port: 8761
+server:
+  port: 8761
 
 logging:
   level:
     com.murphy.springcloud: 'debug'
 
-#test: this is from local config.
-
-test3: test3 from appliation.yml
+test: this is from local config -- application.yml
 
