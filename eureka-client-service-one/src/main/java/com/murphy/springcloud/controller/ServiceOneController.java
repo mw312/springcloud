@@ -18,13 +18,13 @@ public class ServiceOneController {
 
     private static final Log log = LogFactory.getLog(ServiceOneController.class);
 
-    @Value("${server.port}")
+    //@Value("${server.port}")
     String port;
 
     @Value("${test}")
     String test;
 
-    @Value("${spring.datasource.url}")
+    //@Value("${spring.datasource.url}")
     String url;
 
     @Value("${test2}")

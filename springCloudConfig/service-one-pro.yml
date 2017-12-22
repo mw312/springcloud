@@ -5,8 +5,8 @@ spring:
   profiles: pro
   datasource:
     url: jdbc:postgresql://10.10.10.110:5432/tomato
-    username: **
-    password: **
+    username: test
+    password: test
     driver-class: org.postgresql.Driver
 
 logging:
