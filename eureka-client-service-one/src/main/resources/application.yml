@@ -36,6 +36,10 @@ spring:
   application:
     name: service-one
 
+management:
+  security:
+    enabled: false
+
 logging:
   level:
     com.murphy.springcloud: 'DEBUG'

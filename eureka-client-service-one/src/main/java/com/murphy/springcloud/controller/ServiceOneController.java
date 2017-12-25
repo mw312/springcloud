@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2017/11/3
  */
 @RestController
+//@RefreshScope
 public class ServiceOneController {
 
     private static final Log log = LogFactory.getLog(ServiceOneController.class);
