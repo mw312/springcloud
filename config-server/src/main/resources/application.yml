@@ -11,11 +11,20 @@ spring:
           git:
             uri: https://github.com/mw312/springcloud
             searchPaths: springCloudConfig
+      # 开启消息跟踪
+      bus:
+        trace:
+          enabled: true
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
+
+# 刷新时，关闭安全验证
+management:
+  security:
+    enabled: false
 
 logging:
   level:
