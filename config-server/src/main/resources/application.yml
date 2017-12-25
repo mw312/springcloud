@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: config-server
+  #配置中心从github上拉数据#
   cloud:
       config:
         label: master
@@ -11,10 +12,11 @@ spring:
           git:
             uri: https://github.com/mw312/springcloud
             searchPaths: springCloudConfig
-      # 开启消息跟踪
+      # 开启消息跟踪（GET方法调用：/trace）
       bus:
         trace:
           enabled: true
+  # 开启rabbitmq实现异步消息推送（配置文件变更后通过POST方法触发配置中心的/bus/refresh，通过消息以及事件的形式实现各个客户端节点配置文件同步更新）
   rabbitmq:
     host: localhost
     port: 5672
