@@ -10,7 +10,7 @@ spring:
       label: master
       profile: pro
       #uri: http://localhost:8888/
-      #配置中心集群部署，通过负载均衡连接配置中心#
+      #配置中心服务化和高可用，集群部署，通过负载均衡连接配置中心#
       discovery:
         enabled: true
         serviceId: config-server
