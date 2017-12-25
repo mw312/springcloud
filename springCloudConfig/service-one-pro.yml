@@ -7,7 +7,7 @@ spring:
     password: test
     driver-class: org.postgresql.Driver
   # 开启rabbitmq实现配置中心中配置文件的更新消息监听
-  abbitmq:
+  rabbitmq:
     host: localhost
     port: 5672
     username: guest1
