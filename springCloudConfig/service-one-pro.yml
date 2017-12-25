@@ -1,5 +1,4 @@
-server:
-  port: 18761
+
 
 spring:
   datasource:
@@ -12,4 +11,4 @@ logging:
   level:
     com.murphy.springcloud: 'INFO'
 
-test: this is from gitHub config center -- service-one-pro.yml
+test: this is from gitHub config center -- service-one-pro.yml  -=hjhkj 
