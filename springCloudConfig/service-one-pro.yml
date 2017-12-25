@@ -12,4 +12,4 @@ logging:
   level:
     com.murphy.springcloud: 'INFO'
 
-test: this is from gitHub config center -- service-one-pro.yml
+test: this is from gitHub config center -- service-one-pro.yml --
