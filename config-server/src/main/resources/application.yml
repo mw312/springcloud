@@ -16,7 +16,9 @@ spring:
       bus:
         trace:
           enabled: true
-  # 开启rabbitmq实现异步消息推送（配置文件变更后通过POST方法触发配置中心的/bus/refresh，通过消息以及事件的形式实现各个客户端节点配置文件同步更新）
+  # 开启rabbitmq实现异步消息推送
+  # 1.配置文件变更后通过POST方法触发配置中心的/bus/refresh，通过消息以及事件的形式实现所有连接配置中心的客户端节点的配置文件的同步更新
+  # 2.通过/bus/refresh?destination=serviceAppName来刷新消息总线上指定的微服务实例[serviceAppName指的是各个微服务的ApplicationContext ID]
   rabbitmq:
     host: localhost
     port: 5672
