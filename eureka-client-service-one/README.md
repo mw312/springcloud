@@ -9,3 +9,4 @@
     4.3 关闭安全认证：springboot 1.5.X 以上默认开通了安全认证，所以需要在配置文件application.properties添加以下配置：
     management.security.enabled=false
     4.4 以post请求的方式来访问http://localhost:8761/refresh 就会自动更新修改后的配置文件。
+5.引入spring-cloud-starter-zipkin包，实现服务调用链路追踪。
