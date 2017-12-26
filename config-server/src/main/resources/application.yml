@@ -30,11 +30,18 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
 
-# 刷新时，关闭安全验证
+#actuator暴露的接口（例如：/health; /dump; /env; /metrics等）的安全策略
 management:
+  context-path: /admin    #前缀
+  port: 11111             #端口，为了和api接口使用的端口进行分离
   security:
-    enabled: false
+    enabled: false        #是否需要安全保证
 
 logging:
   level:
     org.springframework.cloud: 'INFO'
+
+
+
+
+
