@@ -1,7 +1,7 @@
 本服务用例说明：
 1.服务消费者
-2.多环境配置
-3.采用spring cloud config
+2.采用spring cloud config连接配置中心
+3.多环境配置【本地测试时使用pro环境变量测试从配置中心获取配置】
 4.无需重启更新配置文件：
     4.1 添加依赖：增加了spring-boot-starter-actuator包，spring-boot-starter-actuator是一套监控的功能，
 可以监控程序在运行时状态，其中就包括/refresh的功能。
