@@ -18,4 +18,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://simu:8770/eureka/,http://pro:8780/eureka/
+      defaultZone: http://sim:8770/eureka/,http://pro:8780/eureka/
