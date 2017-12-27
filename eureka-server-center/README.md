@@ -1,8 +1,8 @@
 本服务用例说明：
 1.服务注册中心集群实现高可用
-2.通过启动参数-Dspring.profiles.active=test加载对应的配置文件：
-    application-test.yml，application-simu.yml，application-prod.yml
-3.通过启动参数的变更（test/simu/prod）可以启动多个注册中心的实例，他们之间互相注册。
+2.通过启动参数-Dspring.profiles.active=dev加载对应的配置文件：
+    application-dev.yml，application-sim.yml，application-pro.yml
+3.通过启动参数的变更（dev/sim/pro）可以启动多个注册中心的实例，他们之间互相注册。
 4.当有服务注册到其中一个注册中心时，该服务注册信息会同步给其他注册中心，因此多个Eureka server是对等的，它们都存有相同的信息，
 这样就可以通过服务器的冗余来增加注册中心的可靠性。
 5.当注册中心全部都挂了，运行着的客户端之间依然可以通过原有的注册表进行调用；注册中心重启后，通过心跳机制客户端会继续注册进来。

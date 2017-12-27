@@ -10,3 +10,4 @@
     management.security.enabled=false
     4.4 以post请求的方式来访问http://localhost:8761/refresh 就会自动更新修改后的配置文件。
 5.引入spring-cloud-starter-zipkin包，实现服务调用链路追踪。
+6.pro环境下连接到高可用服务注册中心。

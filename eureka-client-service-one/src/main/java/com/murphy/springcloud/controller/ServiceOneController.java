@@ -33,7 +33,7 @@ public class ServiceOneController {
     public String index(@RequestParam String name) {
         log.info("spring cloud config center of test:" + test);
         log.debug("spring cloud config of spring.datasource.url:" + url);
-        return "service one: hi " + name + ",i am from port:" + port + test;
+        return "service one: hi " + name + ",i am from port:" + port;
     }
 
     @RequestMapping("/hello")

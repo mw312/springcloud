@@ -1,8 +1,8 @@
 server:
-  port: 8760
+  port: 8780
 
 spring:
-  profiles: dev
+  profiles: pro
   application:
     name: eureka-server-center
 
@@ -13,9 +13,9 @@ eureka:
   # 127.0.0.1 sim
   # 127.0.0.1 pro
   instance:
-    hostname: dev
+    hostname: pro
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://simu:8770/eureka/,http://pro:8780/eureka/
+      defaultZone: http://dev:8760/eureka/,http://sim:8770/eureka/
