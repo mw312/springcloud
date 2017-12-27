@@ -1,0 +1,18 @@
+server:
+  port: 8760
+
+spring:
+  profiles: dev
+  application:
+    name: eureka-server-center
+
+eureka:
+  environment: dev
+  instance:
+    hostname: dev
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      # defaultZone: http://192.168.80.145:8770/eureka/,http://localhost:8780/eureka/
+      defaultZone: http://simu:8770/eureka/,http://prod:8780/eureka/
