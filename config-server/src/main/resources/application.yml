@@ -16,9 +16,7 @@ spring:
       bus:
         trace:
           enabled: true
-  # 开启rabbitmq实现异步消息推送
-  # 1.配置文件变更后通过POST方法调用/bus/refresh触发配置中心重新从github拉取配置文件，通过消息以及事件的形式实现所有连接配置中心的客户端节点的配置文件的同步更新
-  # 2.通过/bus/refresh?destination=serviceAppName来刷新消息总线上指定的微服务实例的配置文件[serviceAppName指的是各个微服务的ApplicationContext ID]
+  # 开启rabbitmq实现异步消息推送[详见README.md]
   rabbitmq:
     host: localhost
     port: 5672
@@ -31,7 +29,7 @@ eureka:
       # 注册中心开启基础校验后的连接配置 #
       defaultZone: http://admin:admin@localhost:8760/eureka/
 
-# 保证actuator暴露接口的安全性
+# 保证actuator接口的安全性
 security:
   basic:
     enabled: true
@@ -40,7 +38,7 @@ security:
     name: admin       #认证使用的用户名
     password: admin   #认证使用的密码
 
-#actuator暴露接口（例如：/health; /dump; /env; /metrics等）的安全策略
+# actuator暴露接口（例如：/health; /dump; /env; /metrics等）的安全策略
 management:
   context-path: /admin    #前缀
   port: 11111             #端口，为了和api接口使用的端口进行分离

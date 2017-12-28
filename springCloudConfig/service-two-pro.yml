@@ -1,0 +1,29 @@
+#server:
+#  port: 18761
+
+spring:
+  datasource:
+    url: jdbc:postgresql://10.10.10.110:5432/tomato
+    username: test
+    password: test
+    driver-class: org.postgresql.Driver
+  # 开启rabbitmq实现配置中心中配置文件的更新消息监听
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  # Zipkin服务链路追踪服务器的地址
+  zipkin:
+    base-url: http://localhost:8989
+  # 采样比例。默认为0.1，也就是只采样10%的比例。【测试环境设置为1，即全部采样。！！！生产环境切忌不要设置为1】
+  # 在生成环境中，由于业务量比较大，所产生的跟踪数据可能会非常大，如果全部采集一是对业务有一定影响，二是对存储压力也会比较大，所以采样变的很重要。一般来说，我们也不需要把每一个发生的动作都进行记录。
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+logging:
+  level:
+    com.murphy.springcloud: 'INFO'
+
+test: this is from gitHub config center -- service-one-pro.yml
