@@ -15,6 +15,7 @@ spring:
         enabled: true
         serviceId: config-server
 
+#注册中心集群#
 eureka:
   client:
     serviceUrl:
