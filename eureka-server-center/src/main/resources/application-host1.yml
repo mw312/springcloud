@@ -1,20 +1,19 @@
 server:
-  port: 8780
+  port: 8760
 
 spring:
   application:
     name: eureka-server-center
 
 eureka:
-  environment: pro
   # 当前服务器的主机IP。如果配置别名，按照官方文档的指示，需要修改当前服务器的/etc/hosts，指定每个配置中心所在服务器的主机别名：
-  # 127.0.0.1 dev
-  # 127.0.0.1 sim
-  # 127.0.0.1 pro
+  # 127.0.0.1 host1
+  # 127.0.0.1 host2
+  # 127.0.0.1 host3
   instance:
-    hostname: pro
+    hostname: host1
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://dev:8760/eureka/,http://sim:8770/eureka/
+      defaultZone: http://host2:8770/eureka/,http://host3:8780/eureka/
