@@ -19,7 +19,7 @@ eureka:
 ## 保证注册中心的安全性
 security:
   basic:
-    enabled: false    #是否启用基础校验
+    enabled: true    #是否启用基础校验
   user:
     name: admin       #用户名
     password: admin   #密码

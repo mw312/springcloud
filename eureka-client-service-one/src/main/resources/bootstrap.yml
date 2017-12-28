@@ -19,7 +19,8 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://host1:8760/eureka/,http://host2:8770/eureka/,http://host3:8780/eureka/
+      # 注册中心集群，其中host1开启基础校验 #
+      defaultZone: http://admin:admin@host1:8760/eureka/,http://host2:8770/eureka/,http://host3:8780/eureka/
 
 --- #在此配置各环境下的公共配置信息#
 test: this is from local config -- bootstrap.yml
