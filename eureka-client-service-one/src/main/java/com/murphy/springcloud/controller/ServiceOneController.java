@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class ServiceOneController {
 
-    private static final Log log = LogFactory.getLog(ServiceOneController.class);
+    private final Log log = LogFactory.getLog(this.getClass());
 
     @Value("${server.port}")
     String port;
@@ -33,7 +33,7 @@ public class ServiceOneController {
     public String index(@RequestParam String name) {
         log.info("spring cloud config center of test:" + test);
         log.debug("spring cloud config of spring.datasource.url:" + url);
-        return "service one: hi " + name + ",i am from port:" + port;
+        return "service one: hi " + name + ",i am from port:" + port + ";test:" + test;
     }
 
     @RequestMapping("/hello")

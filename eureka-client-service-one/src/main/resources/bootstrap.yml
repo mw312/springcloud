@@ -19,7 +19,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://dev:8760/eureka/,http://sim:8770/eureka/,http://pro:8780/eureka/
+      defaultZone: http://host1:8760/eureka/,http://host2:8770/eureka/,http://host3:8780/eureka/
 
 --- #在此配置各环境下的公共配置信息#
 test: this is from local config -- bootstrap.yml

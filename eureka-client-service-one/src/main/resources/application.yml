@@ -40,5 +40,5 @@ logging:
   level:
     com.murphy.springcloud: 'DEBUG'
 
-test: this is from local config -- application.yml
+test: this is from service [one] local config -- application.yml
 

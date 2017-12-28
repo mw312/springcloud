@@ -1,12 +1,44 @@
-server:
-  port: 8762
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tomato
+    username: ota
+    password: ota
+    driver-class: org.postgresql.Driver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10 # 续约更新时间间隔（默认30秒）
+    leaseExpirationDurationInSeconds: 30 # 租期到期时间（默认90秒）
+
+---
+spring:
+  profiles: test
+  datasource:
+    url: jdbc:postgresql://192.168.20.61:5432/tomato
+    username: ota
+    password: ota
+    driver-class: org.postgresql.Driver
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
 
+--- # 在此配置各环境下的公共配置信息 #
+server:
+  port: 8762
+
 spring:
   application:
     # 测试模拟两个service-one服务集群
     name: service-one
+
+logging:
+  level:
+    com.murphy.springcloud: 'DEBUG'
+
+test: this is from service [two] local config -- application.yml
