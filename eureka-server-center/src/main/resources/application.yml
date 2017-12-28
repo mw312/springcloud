@@ -16,7 +16,7 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
-## 保证注册中心的安全性
+## 保证访问注册中心的安全性
 security:
   basic:
     enabled: true    #是否启用基础校验

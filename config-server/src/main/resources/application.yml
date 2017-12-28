@@ -33,6 +33,7 @@ eureka:
 security:
   basic:
     enabled: true
+    path: /config     #仅对/config路径的actuator接口进行认证【如果不配置客户端会因为权限问题连接不上此配置中心而报错】
   user:
     name: admin       #用户名
     password: admin   #密码
