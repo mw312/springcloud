@@ -12,7 +12,7 @@ spring:
           git:
             uri: https://github.com/mw312/springcloud
             searchPaths: springCloudConfig
-      # 开启消息跟踪（GET方法调用：/trace）
+      # 开启消息跟踪（GET方法调用：/${配置中心IP}:${management.port}/${management.context-path}/trace）
       bus:
         trace:
           enabled: true
