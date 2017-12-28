@@ -29,21 +29,20 @@ eureka:
       # 注册中心开启基础校验后的连接配置 #
       defaultZone: http://admin:admin@localhost:8760/eureka/
 
-# 保证actuator接口的安全性
+# 保证actuator接口暴露的安全性
 security:
   basic:
     enabled: true
-    path: /admin      #针对/admin路径进行认证
   user:
-    name: admin       #认证使用的用户名
-    password: admin   #认证使用的密码
+    name: admin       #用户名
+    password: admin   #密码
 
-# actuator暴露接口（例如：/health; /dump; /env; /metrics等）的安全策略
+# 暴露actuator接口（例如：/bus/refresh; /health; /dump; /env; /metrics等）的安全策略
 management:
-  context-path: /admin    #前缀
-  port: 11111             #端口，为了和api接口使用的端口进行分离
+  context-path: /config    #前缀
+  port: 11111              #端口，为了和api接口使用的端口进行分离
   security:
-    enabled: true        #是否需要安全保证
+    enabled: true          #是否需要安全保证
 
 logging:
   level:
