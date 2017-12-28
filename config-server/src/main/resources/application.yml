@@ -28,7 +28,8 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
+      # 注册中心开启基础校验后的连接配置 #
+      defaultZone: http://admin:admin@localhost:8760/eureka/
 
 #actuator暴露的接口（例如：/health; /dump; /env; /metrics等）的安全策略
 management:
