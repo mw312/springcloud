@@ -11,3 +11,5 @@ RUN cd /tmp/build && mvn clean package \
 && cd / && rm -rf /tmp/build
 VOLUME /tmp
 ENTRYPOINT ["java", "-jar", "/app.jar"]
+#构建镜像命令
+#docker build -t eureka-server-center .
